@@ -31,3 +31,12 @@ class BookOut(BookBase):
     class Config:
         orm_mode = True
         #orm_mode = True allows Pydantic to read data from ORM objects directly.
+
+#Usercreationg schema
+class UserCreate(BaseModel):
+    username: str
+    password: str
+#Userlogin schema 
+class UserLogin(BaseModel):
+    username: str
+    password: str
